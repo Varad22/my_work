@@ -10,9 +10,9 @@ driver.get("https://www.instagram.com/")
 
 time.sleep(5)
 login_id = driver.find_element_by_name("username")
-login_id.send_keys("varad.22")
+login_id.send_keys("  ")#sender's user id
 pas = driver.find_element_by_name("password")
-pas.send_keys("varad kjsieit")
+pas.send_keys(" ")#sender's password
 login = driver.find_element_by_class_name("y3zKF")
 login.click()
 
@@ -34,7 +34,7 @@ search.click()
 
 time.sleep(5)
 receiver = driver.find_element_by_name("queryBox")
-receiver.send_keys("somesh")
+receiver.send_keys(" ")#receiver's user id
 time.sleep(3)
 select_receiver = driver.find_element_by_class_name("glyphsSpriteCircle__outline__24__grey_2")
 select_receiver.click()
@@ -43,9 +43,8 @@ nxt.click()
 
 time.sleep(3)
 text = driver.find_element_by_tag_name("textarea")
-text.send_keys("hi")
+text.send_keys(" ") #text
 text.send_keys(Keys.ENTER)
-
 
 time.sleep(10)
 driver.quit()
