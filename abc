@@ -1,0 +1,51 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+PATH = "C:\Program Files (x86)\chromedriver.exe"
+
+driver = webdriver.Chrome(PATH)
+
+driver.get("https://www.instagram.com/")
+
+time.sleep(5)
+login_id = driver.find_element_by_name("username")
+login_id.send_keys("varad.22")
+pas = driver.find_element_by_name("password")
+pas.send_keys("varad kjsieit")
+login = driver.find_element_by_class_name("y3zKF")
+login.click()
+
+time.sleep(10)
+noti = driver.find_element_by_class_name("cmbtv")
+noti.click()
+
+time.sleep(5)
+noti2 = driver.find_element_by_class_name("HoLwm")
+noti2.click()
+
+time.sleep(5)
+dm = driver.find_element_by_class_name("KdEwV")
+dm.click()
+
+time.sleep(10)
+search = driver.find_element_by_class_name("QBdPU")
+search.click()
+
+time.sleep(5)
+receiver = driver.find_element_by_name("queryBox")
+receiver.send_keys("somesh")
+time.sleep(3)
+select_receiver = driver.find_element_by_class_name("glyphsSpriteCircle__outline__24__grey_2")
+select_receiver.click()
+nxt = driver.find_element_by_class_name("rIacr")
+nxt.click()
+
+time.sleep(3)
+text = driver.find_element_by_tag_name("textarea")
+text.send_keys("hi")
+text.send_keys(Keys.ENTER)
+
+
+time.sleep(10)
+driver.quit()
