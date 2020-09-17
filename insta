@@ -16,7 +16,7 @@ pas.send_keys(" ")#sender's password
 login = driver.find_element_by_class_name("y3zKF")
 login.click()
 
-time.sleep(10)
+time.sleep(5)
 noti = driver.find_element_by_class_name("cmbtv")
 noti.click()
 
@@ -28,20 +28,21 @@ time.sleep(5)
 dm = driver.find_element_by_class_name("KdEwV")
 dm.click()
 
-time.sleep(10)
+time.sleep(5)
 search = driver.find_element_by_class_name("QBdPU")
 search.click()
 
 time.sleep(5)
 receiver = driver.find_element_by_name("queryBox")
 receiver.send_keys(" ")#receiver's user id
-time.sleep(3)
+
+time.sleep(5)
 select_receiver = driver.find_element_by_class_name("glyphsSpriteCircle__outline__24__grey_2")
 select_receiver.click()
 nxt = driver.find_element_by_class_name("rIacr")
 nxt.click()
 
-time.sleep(3)
+time.sleep( )#time
 text = driver.find_element_by_tag_name("textarea")
 text.send_keys(" ") #text
 text.send_keys(Keys.ENTER)
