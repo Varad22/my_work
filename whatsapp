@@ -1,0 +1,23 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+PATH = "C:\Program Files (x86)\chromedriver.exe"
+
+driver = webdriver.Chrome(PATH)
+
+driver.get("https://web.whatsapp.com/")
+
+time.sleep(15)
+search = driver.find_element_by_class_name("_3FRCZ")
+search.send_keys(" ")#receiver's name
+search.send_keys(Keys.RETURN)
+
+time.sleep()#time
+text = driver.find_element_by_class_name("_3uMse")
+text.send_keys(" ")#text
+driver.find_element_by_class_name("_1U1xa").click()
+
+
+time.sleep(10)
+driver.quit()
